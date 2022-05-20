@@ -8,16 +8,26 @@ import java.util.Scanner;
 public class TorpedoProgram {
     public static final int PALYA_HOSSZ = 7;
     public static void main(String[] args) {
+        jatek();
+    }
+
+    private static void jatek() {
         int[] poz = hajoPozicio();
         Hajo hajo = new Hajo(poz);
         int talalatokSzama = 0;
         int loves = 0;
         do {
             int tipp = jatekosTippBe();
+            String talaltE = hajo.talalat(tipp);
+            if (talaltE.equals("találat")) {
+                talalatokSzama++;
+                System.out.println(talaltE);
+            }else{
+                System.out.println(talaltE);
+            }
             loves++;
-        } while (!(talalatokSzama == 0));
-        
-        
+        } while (!(talalatokSzama == 3));
+        System.out.println("Talált és süllyedt " +loves+ " db lövésből.");
     }
 
     private static int[] hajoPozicio() {
