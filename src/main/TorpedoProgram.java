@@ -41,10 +41,13 @@ public class TorpedoProgram {
     }
 
     private static int jatekosTippBe() {
+        int tipp = 1;
+        do {
         Scanner sc = new Scanner(System.in);
-        System.out.println("Hova lő: ");
-        int tipp = sc.nextInt();
-        return tipp;    
+        System.out.printf("Hova lő(1-%d): \n", PALYA_HOSSZ);
+        tipp = sc.nextInt();
+        } while (!(tipp >= 1 && tipp <= PALYA_HOSSZ));
+        return tipp-1;    
     }
     
     
