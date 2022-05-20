@@ -2,6 +2,7 @@
 package main;
 
 import java.util.Random;
+import java.util.Scanner;
 
 
 public class TorpedoProgram {
@@ -9,6 +10,14 @@ public class TorpedoProgram {
     public static void main(String[] args) {
         int[] poz = hajoPozicio();
         Hajo hajo = new Hajo(poz);
+        int talalatokSzama = 0;
+        int loves = 0;
+        do {
+            int tipp = jatekosTippBe();
+            loves++;
+        } while (!(talalatokSzama == 0));
+        
+        
     }
 
     private static int[] hajoPozicio() {
@@ -20,5 +29,14 @@ public class TorpedoProgram {
         tomb[2] = poz+2;
         return tomb;
     }
+
+    private static int jatekosTippBe() {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Hova lő: ");
+        int tipp = sc.nextInt();
+        return tipp;    
+    }
+    
+    
     
 }
