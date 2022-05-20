@@ -9,14 +9,6 @@ package main;
  *
  * @author szf1_a2
  */
-public class TorpedoTeszt {
-    
-    public static void main(String[] args) {
-        
-    }
-    
-    public String tesztLoves(int poz){
-        return "";
-    }
+public class Hajo {
     
 }
